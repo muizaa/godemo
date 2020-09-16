@@ -3,8 +3,13 @@
 
 pipeline {
     // Lets Jenkins use Docker for us later.
-    agent any    
-
+    agent any  
+    tools {
+        go 'go-1.11'
+    }
+    environment {
+        GO111MODULE = 'on'
+    }  
     // If anything fails, the whole Pipeline stops.
     stages {
         stage('Build & Test') {   
