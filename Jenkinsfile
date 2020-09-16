@@ -34,7 +34,7 @@ pipeline {
 
         stage('Test') {
             // Use golang.
-            agent { docker { image 'golang' } }
+            // agent { docker { image 'golang' } }
 
             steps {                 
                 // Create our project directory.
